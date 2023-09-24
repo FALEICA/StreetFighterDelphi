@@ -10,21 +10,29 @@ type
   TviewGame01 = class(TForm)
     P1_img: TImage;
     P2_img: TImage;
+    P1_clock: TTimer;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
-    procedure configPerson();
+    procedure configPerson(imageObject:TImage; refPersonagem:Integer);
     procedure FormCreate(Sender: TObject);
+
+    
   private
-    { Private declarations }
+
+
+
   public
+    
     { Public declarations }
   end;
 
 var
   viewGame01: TviewGame01;
 
+  
+
 implementation
 
-uses MainView;
+uses MainView, ConfigControlesView;
 
 
 {$R *.dfm}
@@ -37,13 +45,31 @@ end;
 
 
 
+procedure TviewGame01.FormCreate(Sender: TObject);
+begin
+    DoubleBuffered:=true;
+    viewGame01.Width := viewWidth;
+    viewGame01.Height := viewHeight;
+    configPerson(P1_img, 1);
+    configPerson(P2_img, 2);
+    pontoDeReferenciaPersonagens(P1_img); 
+
+
+end;
+
+
+
+
+
+
+
 
 {
   ==========================================================================
   ========= SETANDO CONFIGURAÇOES INICIAIS DOS PERSONAGENS =================
   ==========================================================================
   }
-procedure TviewGame01.configPerson();
+procedure TviewGame01.configPerson(imageObject:TImage; refPersonagem:Integer);
 var
 percWidth: Double;
 percHeight: Double;
@@ -57,29 +83,15 @@ begin
   percTop := 46/100;
 
 
-  P1_img.Width := round(viewWidth * percWidth);
-  P1_img.Height := round(viewHeight * percHeight);
-  P1_img.Top :=  round(viewHeight * percTop);
-  P1_img.Left := 40;
-  P1_img.Refresh;
-
-  P2_img.Width := round(viewWidth * percWidth);
-  p2_img.Height := round(viewHeight * percHeight);
-  p2_img.Top :=  round(viewHeight * percTop);
-  p2_img.Left := viewWidth-P2_img.Width-40;
-  p2_img.Refresh;
-
-
-
+  imageObject.Width := round(viewWidth * percWidth);
+  imageObject.Height := round(viewHeight * percHeight);
+  imageObject.Top :=  round(viewHeight * percTop);
+  if refPersonagem = 1 then imageObject.Left := 40;
+  if refPersonagem = 2 then imageObject.Left := viewWidth-imageObject.Width-40;
+  imageObject.Refresh;
 
 
 end;
 
-procedure TviewGame01.FormCreate(Sender: TObject);
-begin
-    viewGame01.Width := viewWidth;
-    viewGame01.Height := viewHeight;
-    configPerson;
-end;
 
 end.

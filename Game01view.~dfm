@@ -1,6 +1,6 @@
 object viewGame01: TviewGame01
-  Left = 297
-  Top = 120
+  Left = 204
+  Top = 119
   BorderStyle = bsDialog
   Caption = 'Street Fighter by Fabio Leite Cardoso (faleicadev.com)'
   ClientHeight = 538
@@ -1637,5 +1637,10 @@ object viewGame01: TviewGame01
       0000}
     Stretch = True
     Transparent = True
+  end
+  object P1_clock: TTimer
+    Interval = 2
+    Left = 24
+    Top = 216
   end
 end

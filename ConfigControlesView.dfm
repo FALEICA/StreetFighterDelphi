@@ -1,6 +1,6 @@
 object viewConfigControles: TviewConfigControles
-  Left = 326
-  Top = 279
+  Left = 415
+  Top = 187
   BorderStyle = bsDialog
   Caption = 'Configura'#231#227'o de contoles'
   ClientHeight = 362
