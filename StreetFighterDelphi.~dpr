@@ -1,0 +1,17 @@
+program StreetFighterDelphi;
+
+uses
+  Forms,
+  MainView in 'MainView.pas' {viewMain},
+  ConfigControlesView in 'ConfigControlesView.pas' {viewConfigControles},
+  Game01view in 'Game01view.pas' {Form1};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TviewMain, viewMain);
+  Application.CreateForm(TviewConfigControles, viewConfigControles);
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.
