@@ -45,6 +45,17 @@ var
   viewMain: TviewMain;
   viewWidth: Integer;
   viewHeight: Integer;
+  Ryu:String;
+  Ken:String;
+  ChunLi:String;
+  Guile:String;
+  Zangief:String;
+  Dhalsin:String;
+  Honda:String;
+  Balrog:String;
+  Vega:String;
+  Sagat:String;
+  MBizon:String;
 
 
 implementation
@@ -96,6 +107,20 @@ end;
 
 procedure TviewMain.FormCreate(Sender: TObject);
 begin
+    Ryu:= 'Ryu';
+    Ken:= 'Ken';
+    ChunLi:= 'ChunLi';
+    Guile:= 'Guile';
+    Zangief:= 'Zangief';
+    Dhalsin:= 'Dhalsin';
+    Honda:= 'Honda';
+    Balrog:= 'Balrog';
+    Vega:= 'Vega';
+    Sagat:= 'Sagat';
+    MBizon:= 'MBizon';
+
+
+
   {
   ==========================================================================
   ========= SETANDO CONFIGURAÇOES INICIAIS NA CRIAÇÃO DA MAINVIEW ==========

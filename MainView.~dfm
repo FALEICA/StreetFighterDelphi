@@ -1,6 +1,6 @@
 object viewMain: TviewMain
-  Left = 222
-  Top = 129
+  Left = 192
+  Top = 112
   Cursor = crArrow
   BorderStyle = bsToolWindow
   Caption = 

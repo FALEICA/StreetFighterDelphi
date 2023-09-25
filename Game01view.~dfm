@@ -1638,8 +1638,110 @@ object viewGame01: TviewGame01
     Stretch = True
     Transparent = True
   end
+  object GroupBox1: TGroupBox
+    Left = 0
+    Top = 0
+    Width = 849
+    Height = 73
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 8
+      Top = 24
+      Width = 101
+      Height = 16
+      Caption = 'Personagem 1'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label2: TLabel
+      Left = 536
+      Top = 16
+      Width = 101
+      Height = 16
+      Caption = 'Personagem 2'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label3: TLabel
+      Left = 8
+      Top = 48
+      Width = 301
+      Height = 16
+      Caption = 
+        '................................................................' +
+        '...........'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label4: TLabel
+      Left = 536
+      Top = 48
+      Width = 301
+      Height = 16
+      Caption = 
+        '................................................................' +
+        '...........'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object ComboBox1: TComboBox
+      Left = 120
+      Top = 16
+      Width = 193
+      Height = 24
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlue
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ItemHeight = 16
+      ParentFont = False
+      TabOrder = 0
+      Text = 'ComboBox1'
+    end
+    object ComboBox2: TComboBox
+      Left = 648
+      Top = 8
+      Width = 161
+      Height = 24
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clRed
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ItemHeight = 16
+      ParentFont = False
+      TabOrder = 1
+      Text = 'ComboBox1'
+    end
+    object Edit1: TEdit
+      Left = 352
+      Top = 16
+      Width = 121
+      Height = 21
+      TabOrder = 2
+      Text = '1'
+    end
+  end
   object P1_clock: TTimer
-    Interval = 2
+    Interval = 500
+    OnTimer = P1_clockTimer
     Left = 24
     Top = 216
   end
